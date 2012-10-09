@@ -4,7 +4,7 @@ k_event.on = function (eventName, callback) {
     var callbacks = this.callbacks = this.callbacks || {};
      
     if ('string' === typeof eventName && 'function' === typeof callback) {
-        (callbacks[eventName] || callbacks[eventName] = []).push(callback);
+        (callbacks[eventName] || (callbacks[eventName] = [])).push(callback);
     }
 
     return this;
