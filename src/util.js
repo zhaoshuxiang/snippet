@@ -1,6 +1,6 @@
-var k_util = {};
+var Util = {};
 
-k_util.convert = function (bytes) {
+Util.convert = function(bytes) {
     bytes = parseInt(bytes, 10);
 
     if (bytes > 1024 * 1024 * 1024) {
@@ -16,7 +16,7 @@ k_util.convert = function (bytes) {
     }
 };
 
-k_util.getUrlParams = function () {
+Util.getUrlParams = function() {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
     var r = (unescape(decodeURI(window.location.search))).substr(1).match(reg);
     if (r != null)
