@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>test</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="mocha/mocha.css">
+</head>
+<body>
+    <div id="mocha"></div>
+
+    <script src="../src/util.js"></script>
+
+    <script src="should/should.js"></script>
+    <script src="mocha/mocha.js"></script>
+    <script>mocha.setup('bdd');</script>
+    <script src="test.js"></script>
+    <script>
+        if (window.mochaPhantomJS) {
+            mochaPhantomJS.run();
+        } else {
+            mocha.run();
+        }
+    </script>
+</body>
+</html>
