@@ -7,11 +7,18 @@
 <body>
     <div id="mocha"></div>
 
+    <!-- 需要被测试的目标 -->
     <script src="../src/util.js"></script>
 
+    <!-- 断言库 -->
     <script src="should/should.js"></script>
+    <!-- mock库 -->
+    <script src="mock/mock-min.js"></script>
+    <!-- 测试框架 -->
     <script src="mocha/mocha.js"></script>
     <script>mocha.setup('bdd');</script>
+
+    <!-- 编写的测试用例 -->
     <script src="test.js"></script>
     <script>
         if (window.mochaPhantomJS) {
